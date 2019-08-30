@@ -17,11 +17,9 @@ total_coins = int (change_owed * 100)
 quarters = int(total_coins / 25)
 if quarters == 1:
     print("You need 1 quarter.")
-elif quarters > 1:
+elif quarters > 1 or not_quarters == 0:
     print("You need", quarters, "quarters.")
 not_quarters = int(total_coins % 25)
-if not_quarters == 0:
-    print("You need", quarters, "quarters.")
 
 dimes = int(not_quarters / 10)
 if dimes == 1:
@@ -29,8 +27,6 @@ if dimes == 1:
 elif dimes > 1:
     print("You need", dimes, "dimes.")
 not_dimes = int(not_quarters % 10)
-if not_dimes == 0:
-    print("You need", dimes, "dimes.")
     
 nickels = int(not_dimes / 5)
 if nickels == 1:
@@ -38,14 +34,14 @@ if nickels == 1:
 elif nickels > 1:
     print("You need", nickels, "nickels.")
 not_nickels = int(not_dimes % 5)
-if not_nickels == 0:
-    print("You need", nickels, "nickels.")
 
 pennies = int(not_nickels)
 if pennies == 1:
     print("You need 1 penny.")
 elif pennies > 1:
     print("You need", pennies, "pennies.")
+
+
 
 
         
